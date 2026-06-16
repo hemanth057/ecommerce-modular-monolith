@@ -73,3 +73,88 @@ Collections:
 
 ```bash
 mvn spring-boot:run
+
+
+
+
+
+## 📡 API Endpoints
+
+### Authentication
+
+#### Register User
+```http
+POST /api/auth/register
+```
+
+Request:
+```json
+{
+  "username":"hemanth",
+  "email":"hemanth@gmail.com",
+  "password":"12345"
+}
+```
+
+---
+
+#### Login User
+```http
+POST /api/auth/login
+```
+
+Request:
+```json
+{
+  "email":"hemanth@gmail.com",
+  "password":"12345"
+}
+```
+
+Response:
+```text
+JWT Token
+```
+
+---
+
+### Products
+
+#### Get Products
+
+```http
+GET /api/products
+```
+
+Authorization:
+
+```text
+Bearer JWT_TOKEN
+```
+
+
+### Orders
+
+```http
+POST /api/orders
+```
+
+Creates customer order.
+
+
+### Payments
+
+```http
+POST /api/payments
+```
+
+Processes payment.
+
+
+### Notifications
+
+```http
+GET /api/notifications
+```
+
+Fetch notifications.
